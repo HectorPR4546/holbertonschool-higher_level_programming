@@ -4,7 +4,8 @@
 
 def new_in_list(my_list, idx, new_element):
     """
-    Replace an element in a list at a given index without modifying the original list.
+    Replace an element in a list at a given index without modifying
+    the original list.
 
     Args:
         my_list (list): The original list.
@@ -12,8 +13,8 @@ def new_in_list(my_list, idx, new_element):
         new_element: The new value to insert at the given index.
 
     Returns:
-        list: A new list with the modified element, or the original list if
-        the index is out of range.
+        list: A new list with the modified element, or the original list
+        if the index is out of range.
     """
     if 0 <= idx < len(my_list):
         new_list = my_list[:]
