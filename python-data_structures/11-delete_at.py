@@ -1,30 +1,18 @@
 #!/usr/bin/python3
-"""Module that provides a function to delete an item from a list."""
+"""Module that provides a function to delete an element at a given index."""
 
 
 def delete_at(my_list=[], idx=0):
     """
-    Delete an element at a specific index in a list.
+    Delete an element at the specified index in a list.
 
     Args:
         my_list (list): The list to modify.
         idx (int): The index of the element to delete.
 
     Returns:
-        list: The modified list after deletion, or original if index is
-        out of range or invalid.
+        list: The modified list, or the original list if index is invalid.
     """
-    if not isinstance(my_list, list):
-        print("Error: Input must be a list.")
-        return my_list
-
-    if not isinstance(idx, int):
-        print("Error: Position must be an integer.")
-        return my_list
-
-    if idx < 0 or idx >= len(my_list):
-        print("Error: Position is out of range.")
-        return my_list
-
-    del my_list[idx]
+    if 0 <= idx < len(my_list):
+        del my_list[idx]
     return my_list
