@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    """
-    Safely prints the first x integers in a list.
-
-    Args:
-        my_list (list): The list containing elements.
-        x (int): The number of elements to attempt to print.
-
-    Returns:
-        int: The number of integers actually printed.
+    """Print the first x elements of my_list that are integers.
+    Use "{:d}".format() to print each integer without a newline,
+    then print a newline at the end.
+    Return the number of integers printed.
     """
     count = 0
     for i in range(x):
