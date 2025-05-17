@@ -5,7 +5,8 @@ It includes type checks and handles floats by casting to integers.
 """
 
 def add_integer(a, b=98):
-    
+
+
     """
     Adds two integers or floats (casted to integers).
 
