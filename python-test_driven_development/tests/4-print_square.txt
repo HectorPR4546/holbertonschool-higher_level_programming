@@ -1,5 +1,5 @@
 """
-Test the print_square function from 4-print_square.py.
+Test for print_square
 
 >>> print_square = __import__('4-print_square').print_square
 
@@ -31,4 +31,10 @@ size must be an integer
 ... except TypeError as e:
 ...     print(e)
 size must be an integer
-unsupported operand type(s) for +: 'NoneType' and 'int'
+
+>>> try:
+...     print_square()
+... except TypeError as e:
+...     print(e)
+print_square() missing 1 required positional argument: 'size'
+"""
