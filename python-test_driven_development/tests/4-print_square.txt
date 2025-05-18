@@ -31,3 +31,4 @@ size must be an integer
 ... except TypeError as e:
 ...     print(e)
 size must be an integer
+unsupported operand type(s) for +: 'NoneType' and 'int'
