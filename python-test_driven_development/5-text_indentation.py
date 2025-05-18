@@ -5,27 +5,21 @@ Module that prints a text with 2 new lines after '.', '?' and ':'.
 
 
 def text_indentation(text):
-    """
-    Prints a text with 2 new lines after each '.', '?' and ':'.
-
-    Args:
-        text (str): The text to print.
-
-    Raises:
-        TypeError: If text is not a string.
-    """
-    if not isinstance(text, str):
+    """Description: prints a text with 2 new lines after each'., ? and :'
+    - text: is a string
+    - c: is int"""
+    err = "text_indentation() missing 1 required positional argument: 'text'"
+    if text is None:
+        raise TypeError(err)
+    if type(text) is not str:
         raise TypeError("text must be a string")
-
-    text = text.strip()
-    i = 0
-    length = len(text)
-    while i < length:
-        print(text[i], end="")
-        if text[i] in ['.', '?', ':']:
+    if not text:
+        raise TypeError("Text is empty")
+    c = 0
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] in ".?:":
             print("\n")
-            i += 1
-            while i < length and text[i] == ' ':
-                i += 1
-            continue
-        i += 1
+            while c + 1 < len(text) and text[c + 1] == " ":
+                c += 1
+        c += 1
