@@ -35,7 +35,6 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    # Handle division by inf or -inf → result is 0.0
     if div == float('inf') or div == float('-inf'):
         return [[0.0 for _ in row] for row in matrix]
 
