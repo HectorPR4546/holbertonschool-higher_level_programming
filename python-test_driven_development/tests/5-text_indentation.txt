@@ -1,0 +1,55 @@
+"""
+Tests for text_indentation()
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. My name is Hector.")
+Hello.
+<BLANKLINE>
+My name is Hector.
+<BLANKLINE>
+
+>>> text_indentation("Are you okay?Yes I am.")
+Are you okay?
+<BLANKLINE>
+Yes I am.
+<BLANKLINE>
+
+>>> text_indentation("Python: A great language.")
+Python:
+<BLANKLINE>
+A great language.
+<BLANKLINE>
+
+>>> text_indentation("Wait. What?Really:Yes.")
+Wait.
+<BLANKLINE>
+What?
+<BLANKLINE>
+Really:
+<BLANKLINE>
+Yes.
+<BLANKLINE>
+
+>>> text_indentation("   Hello.   World?   Test:   Done.")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+Test:
+<BLANKLINE>
+Done.
+<BLANKLINE>
+
+>>> try:
+...     text_indentation(123)
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation()
+... except TypeError as e:
+...     print(e)
+text_indentation() missing 1 required positional argument: 'text'
+"""
