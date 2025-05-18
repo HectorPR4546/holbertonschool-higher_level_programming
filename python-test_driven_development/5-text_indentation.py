@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Module that prints a text with 2 new lines after '.', '?', and ':'
+Module that prints a text with 2 new lines after '.', '?' and ':'.
 """
 
 
 def text_indentation(text=None):
     """
-    Prints a text with 2 new lines after each '.', '?', and ':'.
+    Prints a text with 2 new lines after each '.', '?' and ':'.
 
     Args:
         text (str): The text to print.
@@ -16,7 +16,9 @@ def text_indentation(text=None):
             given.
     """
     if text is None:
-        raise TypeError("text_indentation() missing 1 required positional argument: 'text'")
+        raise TypeError(
+            "text_indentation() missing 1 required positional argument: 'text'"
+        )
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
