@@ -29,6 +29,10 @@ def text_indentation(text):
         i += 1
 
     lines = result.split("\n")
-    for line in lines:
-        if line.strip() != "":
-            print(line.strip())
+    non_empty_lines = [line.strip() for line in lines if line.strip() != ""]
+
+    for idx, line in enumerate(non_empty_lines):
+        if idx != len(non_empty_lines) - 1:
+            print(line)
+        else:
+            print(line, end="")
