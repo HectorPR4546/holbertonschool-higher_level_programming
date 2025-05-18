@@ -4,7 +4,7 @@ Module that prints a text with 2 new lines after '.', '?' and ':'.
 """
 
 
-def text_indentation(text=None):
+def text_indentation(text):
     """
     Prints a text with 2 new lines after each '.', '?' and ':'.
 
@@ -12,14 +12,8 @@ def text_indentation(text=None):
         text (str): The text to print.
 
     Raises:
-        TypeError: If text is not a string or if no argument is
-            given.
+        TypeError: If text is not a string.
     """
-    if text is None:
-        raise TypeError(
-            "text_indentation() missing 1 required positional argument: 'text'"
-        )
-
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
