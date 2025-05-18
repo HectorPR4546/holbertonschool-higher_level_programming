@@ -22,15 +22,27 @@ def text_indentation(text):
     separators = ['.', '?', ':']
     i = 0
     length = len(text)
+    start_of_line = True
 
     while i < length:
         char = text[i]
+
+        # Skip leading spaces if at the start of a line
+        if start_of_line and char == ' ':
+            i += 1
+            continue
+
         print(char, end='')
+
         if char in separators:
             print('\n')
-            # Skip any spaces immediately following the separator
+            print()
+            start_of_line = True
             i += 1
+            # Skip spaces after separator
             while i < length and text[i] == ' ':
                 i += 1
             continue
+
+        start_of_line = False
         i += 1
