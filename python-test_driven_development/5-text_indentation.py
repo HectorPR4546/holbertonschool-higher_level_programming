@@ -12,7 +12,7 @@ def text_indentation(text=None):
         text (str): The text to print.
 
     Raises:
-        TypeError: If text is not a string or if no argument is provided.
+        TypeError: If text is not a string or if no argument is given.
     """
     if text is None:
         raise TypeError("text_indentation() missing 1 required positional argument: 'text'")
