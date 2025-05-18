@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module provides a function that prints text
+This module provides a function that prints a text
 with two new lines after each '.', '?', and ':'
 """
 
