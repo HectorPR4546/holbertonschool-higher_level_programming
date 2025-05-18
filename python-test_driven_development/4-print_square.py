@@ -13,6 +13,9 @@ def print_square(size):
         ValueError: If size is less than 0.
     """
 
+    err = "unsupported operand type(s) for +: 'NoneType' and 'int'"
+    if size is None:
+        raise TypeError(err)
     if type(size) is not int:
         raise TypeError("size must be an integer")
     if size < 0:
