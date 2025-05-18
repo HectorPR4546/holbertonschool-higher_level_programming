@@ -31,11 +31,9 @@ def text_indentation(text):
             continue
         i += 1
 
-    # Split and strip lines to avoid leading/trailing spaces
     lines = result.split('\n')
     non_empty_lines = [line.strip() for line in lines if line.strip() != ""]
 
-    # If text contains none of the punctuation, print it as is without extra newline
     if all(punct not in text for punct in ".?:"):
         print(text, end="")
     else:
