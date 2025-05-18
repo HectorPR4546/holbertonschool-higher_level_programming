@@ -3,6 +3,7 @@
 Module that prints a text with 2 new lines after '.', '?', and ':'
 """
 
+
 def text_indentation(text=None):
     """
     Prints a text with 2 new lines after each '.', '?', and ':' character.
@@ -12,7 +13,6 @@ def text_indentation(text=None):
 
     Raises:
         TypeError: If text is not a string or if no argument is provided.
-
     """
     if text is None:
         raise TypeError("text_indentation() missing 1 required positional argument: 'text'")
@@ -26,7 +26,6 @@ def text_indentation(text=None):
         print(text[i], end="")
         if text[i] in ['.', '?', ':']:
             print("\n")
-
             i += 1
             while i < length and text[i] == ' ':
                 i += 1
