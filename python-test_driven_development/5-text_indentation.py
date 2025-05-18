@@ -23,6 +23,7 @@ def text_indentation(text=None):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    text = text.strip()
     i = 0
     length = len(text)
     while i < length:
