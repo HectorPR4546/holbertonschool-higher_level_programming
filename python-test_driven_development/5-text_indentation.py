@@ -19,7 +19,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    separators = ['.', '?', ':']
+    separators = {'.', '?', ':'}
     i = 0
     length = len(text)
     start_of_line = True
@@ -27,7 +27,6 @@ def text_indentation(text):
     while i < length:
         char = text[i]
 
-        # Skip leading spaces if at the start of a line
         if start_of_line and char == ' ':
             i += 1
             continue
@@ -39,7 +38,6 @@ def text_indentation(text):
             print()
             start_of_line = True
             i += 1
-            # Skip spaces after separator
             while i < length and text[i] == ' ':
                 i += 1
             continue
