@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """0-square module.
 
 This module defines an empty Square class as a starting point

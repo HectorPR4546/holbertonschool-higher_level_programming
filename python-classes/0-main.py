@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """Main module for testing the Square class.
 
 This script demonstrates instantiating the Square class defined in
