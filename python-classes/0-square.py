@@ -22,4 +22,4 @@ class Square:
     This class does not define any attributes or methods yet.
 
     """
-    
+    {}
