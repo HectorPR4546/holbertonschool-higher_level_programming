@@ -1,25 +1,16 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-"""0-square module.
+"""Module that defines an empty Square class.
 
-This module defines an empty Square class for educational purposes.
-
-Classes:
-    Square: An empty class that defines a square.
-
-Example:
-    >>> my_square = Square()
-    >>> print(type(my_square))
-    <class '0-square.Square'>
-    >>> print(my_square.__dict__)
-    {}
-
+This module contains a single class definition for `Square`.
+It serves as a basic structure for defining square-shaped
+objects, with no attributes or methods at this stage.
 """
 
+
 class Square:
-    """An empty class that defines a square.
+    """Represents a square.
 
-    This class does not define any attributes or methods yet.
-
+    This is an empty class meant to be expanded in later tasks.
     """
     pass
