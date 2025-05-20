@@ -24,4 +24,4 @@ class Square:
         This is part of Holberton School's Python OOP introduction.
 
     """
-    {}
+    pass
