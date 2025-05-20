@@ -16,12 +16,4 @@ Example:
 """
 
 class Square:
-    """An empty class that defines a square.
 
-    This class currently does not include any attributes or methods.
-
-    Note:
-        This is part of Holberton School's Python OOP introduction.
-
-    """
-    
