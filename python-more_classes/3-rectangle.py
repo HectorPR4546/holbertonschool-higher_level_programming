@@ -79,9 +79,12 @@ class Rectangle:
         """Provides an informal string representation of the rectangle.
 
         Returns:
-            str: A string made of '#' characters forming the shape of the rectangle,
-            or an empty string if width or height is 0.
+            str: A string made of '#' characters forming the shape of the
+            rectangle, or an empty string if width or height is 0.
         """
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join(["#" * self.width for _ in range(self.height)])
+        lines = []
+        for _ in range(self.height):
+            lines.append("#" * self.width)
+        return "\n".join(lines)
