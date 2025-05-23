@@ -4,7 +4,8 @@
 
 This module provides a class Rectangle with attributes for width and height.
 It includes validation, and methods to compute area, perimeter, a string
-representation using the `print_symbol` character, and cleanup message on deletion.
+representation using the `print_symbol` character, and cleanup message on
+deletion.
 """
 
 
@@ -83,8 +84,8 @@ class Rectangle:
         """Provides an informal string representation of the rectangle.
 
         Returns:
-            str: A string made of `print_symbol` characters forming the shape of the
-            rectangle, or an empty string if width or height is 0.
+            str: A string made of `print_symbol` characters forming the shape
+            of the rectangle, or an empty string if width or height is 0.
         """
         if self.width == 0 or self.height == 0:
             return ""
