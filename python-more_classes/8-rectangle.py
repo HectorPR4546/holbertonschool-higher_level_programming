@@ -4,8 +4,8 @@
 
 This module provides a class Rectangle with attributes for width and height.
 It includes validation, methods to compute area, perimeter, a string
-representation using the `print_symbol` character, a static method to compare
-rectangles by area, and a cleanup message on deletion.
+representation using the `print_symbol` character, and cleanup message
+on deletion.
 """
 
 
@@ -13,7 +13,7 @@ class Rectangle:
     """Represents a rectangle defined by its width and height."""
 
     number_of_instances = 0
-    print_symbol = '#'  # Symbol used for string representation of the rectangle
+    print_symbol = '#'  # Symbol for string representation of the rectangle
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -24,10 +24,12 @@ class Rectangle:
             rect_2 (Rectangle): The second rectangle.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If either rect_1 or rect_2 is not an instance
+                of Rectangle.
 
         Returns:
-            Rectangle: The rectangle with the larger area, or rect_1 if both are equal.
+            Rectangle: The rectangle with the larger area,
+                or rect_1 if both are equal.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -108,7 +110,7 @@ class Rectangle:
 
         Returns:
             str: A string made of `print_symbol` characters forming the shape
-            of the rectangle, or an empty string if width or height is 0.
+                of the rectangle, or an empty string if width or height is 0.
         """
         if self.width == 0 or self.height == 0:
             return ""
@@ -123,9 +125,11 @@ class Rectangle:
         Returns:
             str: A string that can recreate the rectangle using eval().
         """
-        return "Rectangle({}, {})".format(self.width, self.height)
+        return "Rectangle({}, {})".format(
+            self.width, self.height
+        )
 
     def __del__(self):
-        """Prints a message when an instance is deleted and decrements instance count."""
+        """Prints a message when an instance is deleted."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
