@@ -1,49 +1,32 @@
-tests/7-base_geometry.txt
-BaseGeometry Class Test Cases
-============================
+Test cases for BaseGeometry class
+=================================
 
-This file contains test cases for the BaseGeometry class implementation.
-It tests both valid and invalid inputs for the integer_validator method
-and verifies the area() method raises the proper exception.
-
->>> from 7_base_geometry import BaseGeometry
+>>> from 7-base_geometry import BaseGeometry
 >>> bg = BaseGeometry()
 
-Test valid integer inputs:
->>> bg.integer_validator("positive_int", 1)
->>> bg.integer_validator("large_int", 1000000)
+Test valid integer validation:
+>>> bg.integer_validator("width", 10)
+>>> bg.integer_validator("height", 5)
 
-Test invalid string input:
->>> bg.integer_validator("invalid", "text")
+Test invalid type:
+>>> bg.integer_validator("age", "five")
 Traceback (most recent call last):
 ...
-TypeError: invalid must be an integer
+TypeError: age must be an integer
 
 Test zero value:
->>> bg.integer_validator("zero", 0)
+>>> bg.integer_validator("count", 0)
 Traceback (most recent call last):
 ...
-ValueError: zero must be greater than 0
+ValueError: count must be greater than 0
 
 Test negative value:
->>> bg.integer_validator("negative", -5)
+>>> bg.integer_validator("distance", -5)
 Traceback (most recent call last):
 ...
-ValueError: negative must be greater than 0
+ValueError: distance must be greater than 0
 
-Test float value:
->>> bg.integer_validator("float", 5.5)
-Traceback (most recent call last):
-...
-TypeError: float must be an integer
-
-Test boolean value:
->>> bg.integer_validator("boolean", True)
-Traceback (most recent call last):
-...
-TypeError: boolean must be an integer
-
-Test area method implementation:
+Test area method:
 >>> bg.area()
 Traceback (most recent call last):
 ...

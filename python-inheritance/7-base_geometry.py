@@ -1,25 +1,23 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""Defines a class BaseGeometry with validation methods."""
+"""Defines a base geometry class with validation methods."""
 
 
 class BaseGeometry:
-    """Base class for geometry objects."""
+    """Represents base geometric operations and validations."""
 
     def area(self):
-        """Raises an exception since area is not implemented.
+        """Calculate the area of the geometry.
 
         Raises:
-            Exception: Always raised with the message that area is
-            not implemented.
+            Exception: Indicates area calculation is not implemented.
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validates that a parameter is a positive integer.
+        """Validate that a value is a positive integer.
 
         Args:
-            name (str): The name of the parameter.
+            name (str): The name of the parameter being validated.
             value (int): The value to validate.
 
         Raises:
