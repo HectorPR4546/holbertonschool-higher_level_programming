@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-"""Module defining abstract Shape class and its implementations."""
+"""Abstract shape classes and duck typing demonstration."""
 
 from abc import ABC, abstractmethod
 import math
 
 
 class Shape(ABC):
-    """Abstract shape class."""
+    """Abstract base class for shapes."""
 
     @abstractmethod
     def area(self):
-        """Calculate area."""
+        """Return the area."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Calculate perimeter."""
+        """Return the perimeter."""
         pass
 
 
@@ -61,7 +61,7 @@ class Rectangle(Shape):
 
 def shape_info(shape):
     """
-    Print area and perimeter of a shape.
+    Print area and perimeter of the shape.
 
     Args:
         shape: Object with area() and perimeter().
