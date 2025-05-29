@@ -1,27 +1,19 @@
 #!/usr/bin/python3
-"""Abstract shape classes and duck typing demonstration."""
-
 from abc import ABC, abstractmethod
 import math
 
 
 class Shape(ABC):
-    """Abstract base class for shapes."""
-
     @abstractmethod
     def area(self):
-        """Return the area."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Return the perimeter."""
         pass
 
 
 class Circle(Shape):
-    """Circle shape."""
-
     def __init__(self, radius):
         self.radius = radius
 
@@ -33,8 +25,6 @@ class Circle(Shape):
 
 
 class Rectangle(Shape):
-    """Rectangle shape."""
-
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -47,12 +37,11 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Print area and perimeter of the shape."""
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    print("Area:", shape.area())
+    print("Perimeter:", shape.perimeter())
 
 
-# === TESTING SECTION ===
+# Testing with a circle and a rectangle (required)
 circle = Circle(5)
 rectangle = Rectangle(4, 6)
 
