@@ -39,11 +39,3 @@ class Rectangle(Shape):
 def shape_info(shape):
     print("Area:", shape.area())
     print("Perimeter:", shape.perimeter())
-
-
-# Testing with a circle and a rectangle (required)
-circle = Circle(5)
-rectangle = Rectangle(4, 6)
-
-shape_info(circle)
-shape_info(rectangle)
