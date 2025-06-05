@@ -45,30 +45,30 @@ By the end of this project, you should be able to explain the following concepts
   ```bash
   python3 -m doctest ./tests/*
 
-📁 Files and Descriptions
-0-read_file.py
+📁 Files and Descriptions   
+0-read_file.py   
 
-Reads a text file (UTF-8) and prints its content to stdout.
-1-write_file.py
+Reads a text file (UTF-8) and prints its content to stdout.   
+1-write_file.py   
 
-Writes a string to a text file (UTF-8) and returns the number of characters written.
-2-append_write.py
+Writes a string to a text file (UTF-8) and returns the number of characters written.   
+2-append_write.py   
 
-Appends a string to the end of a text file (UTF-8) and returns the number of characters added.
-3-to_json_string.py
+Appends a string to the end of a text file (UTF-8) and returns the number of characters added.   
+3-to_json_string.py   
 
-Returns the JSON representation of a Python object (like list, dict, int, str, etc.).
-4-from_json_string.py
+Returns the JSON representation of a Python object (like list, dict, int, str, etc.).   
+4-from_json_string.py   
 
-Returns a Python object represented by a JSON string.
-5-save_to_json_file.py
+Returns a Python object represented by a JSON string.   
+5-save_to_json_file.py   
 
-Writes a Python object to a text file using JSON representation.
-6-load_from_json_file.py
+Writes a Python object to a text file using JSON representation.   
+6-load_from_json_file.py   
 
-Creates a Python object from a JSON file.
-7-add_item.py
+Creates a Python object from a JSON file.   
+7-add_item.py   
 
-Adds all arguments from the command line to a Python list, then saves the list to a file named add_item.json.
+Adds all arguments from the command line to a Python list, then saves the list to a file named add_item.json.   
 
     This file uses save_to_json_file and load_from_json_file internally. If the file doesn’t exist, it creates it.
