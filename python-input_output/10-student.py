@@ -28,4 +28,8 @@ class Student:
         """
         if attrs is None:
             return self.__dict__
-        return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+        return {
+            key: getattr(self, key)
+            for key in attrs
+            if hasattr(self, key)
+        }
