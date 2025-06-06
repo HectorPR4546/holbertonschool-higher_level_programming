@@ -21,15 +21,15 @@ class Student:
         """Retrieve a dictionary representation of the Student.
 
         Args:
-            attrs (list): A list of strings representing attribute names to include.
+            attrs (list): A list of strings representing attribute names.
 
         Returns:
-            dict: A dictionary containing the specified student's attributes.
+            dict: Dictionary containing specified student attributes.
         """
         if attrs is None:
             return self.__dict__
         return {
-            key: getattr(self, key)
-            for key in attrs
+            key: getattr(self, key) 
+            for key in attrs 
             if hasattr(self, key)
         }
