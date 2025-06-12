@@ -47,11 +47,11 @@ def add_user():
     
     username = data["username"]
     
-    # Check for duplicate user (return 400 as specified in requirements)
+    # Check for duplicate user
     if username in users:
         return jsonify({"error": "User already exists"}), 400
     
-    # Create new user with whatever data was provided
+    # Create new user with required fields
     user_data = {
         "username": username,
         "name": data.get("name", ""),
