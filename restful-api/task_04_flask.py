@@ -41,28 +41,22 @@ def add_user():
     
     data = request.get_json()
     
-    # Check for required fields
+    # Check for required username field
     if "username" not in data:
         return jsonify({"error": "Username is required"}), 400
     
     username = data["username"]
     
-    # Check for duplicate user
+    # Check for duplicate user (return 400 as specified in requirements)
     if username in users:
-        return jsonify({"error": "User already exists"}), 409  # Changed to 409 Conflict
+        return jsonify({"error": "User already exists"}), 400
     
-    # Validate other fields
-    required_fields = ["name", "age", "city"]
-    for field in required_fields:
-        if field not in data:
-            return jsonify({"error": f"{field} is missing"}), 400
-    
-    # Create new user
+    # Create new user with whatever data was provided
     user_data = {
         "username": username,
-        "name": data["name"],
-        "age": data["age"],
-        "city": data["city"]
+        "name": data.get("name", ""),
+        "age": data.get("age", ""),
+        "city": data.get("city", "")
     }
     
     users[username] = user_data
