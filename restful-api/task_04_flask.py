@@ -8,11 +8,8 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# In-memory "database"
-users = {
-    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}
-}
+# Initialize empty users dictionary
+users = {}
 
 @app.route('/')
 def home():
@@ -22,8 +19,7 @@ def home():
 @app.route('/data')
 def get_data():
     """Returns list of usernames."""
-    usernames = list(users.keys())
-    return jsonify(usernames)
+    return jsonify(list(users.keys()))
 
 @app.route('/status')
 def status():
@@ -33,9 +29,8 @@ def status():
 @app.route('/users/<username>')
 def get_user(username):
     """Returns user data by username or 404 if not found."""
-    user = users.get(username)
-    if user:
-        return jsonify(user)
+    if username in users:
+        return jsonify(users[username])
     return jsonify({"error": "User not found"}), 404
 
 @app.route('/add_user', methods=['POST'])
@@ -49,6 +44,9 @@ def add_user():
         return jsonify({"error": "Username is required"}), 400
     
     username = data["username"]
+    if username in users:
+        return jsonify({"error": "User already exists"}), 400
+    
     users[username] = {
         "username": username,
         "name": data.get("name"),
