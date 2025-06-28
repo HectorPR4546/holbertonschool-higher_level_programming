@@ -12,3 +12,4 @@ This directory contains SQL scripts for more advanced MySQL queries and user man
 - **5-unique_id.sql**: Creates the table `unique_id` with an `id` column that has a default value of 1 and must be unique, and a `name` column.
 - **6-states.sql**: Creates the database `hbtn_0d_usa` and the table `states` within it, with `id` (unique, auto-generated, primary key) and `name` (non-nullable).
 - **7-cities.sql**: Creates the database `hbtn_0d_usa` and the table `cities` within it, with `id` (unique, auto-generated, primary key), `state_id` (non-nullable, foreign key to `states` table), and `name` (non-nullable).
+- **8-cities_of_california_subquery.sql**: Lists all cities of California found in the `hbtn_0d_usa` database, sorted by city ID.
