@@ -30,7 +30,8 @@ def list_states(username, password, db_name):
         cursor.execute("SELECT * FROM states ORDER BY id ASC")
         rows = cursor.fetchall()
         for row in rows:
-            print(row)
+            # Explicitly format the output to match the example exactly.
+            print(f"({row[0]}, '{row[1]}')")
         cursor.close()
         db.close()
     except MySQLdb.Error as e:
