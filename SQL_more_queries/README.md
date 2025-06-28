@@ -14,3 +14,4 @@ This directory contains SQL scripts for more advanced MySQL queries and user man
 - **7-cities.sql**: Creates the database `hbtn_0d_usa` and the table `cities` within it, with `id` (unique, auto-generated, primary key), `state_id` (non-nullable, foreign key to `states` table), and `name` (non-nullable).
 - **8-cities_of_california_subquery.sql**: Lists all cities of California found in the `hbtn_0d_usa` database, sorted by city ID.
 - **9-cities_by_state_join.sql**: Lists all cities in the `hbtn_0d_usa` database, displaying city ID, city name, and corresponding state name, sorted by city ID.
+- **10-genre_id_by_show.sql**: Lists all shows from `hbtn_0d_tvshows` that have at least one genre linked, displaying show title and genre ID, sorted by title and genre ID.
