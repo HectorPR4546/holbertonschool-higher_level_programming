@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-This script connects to a MySQL server and lists all states from a specified database.
-As a Holberton School intern, I am learning how to interact with databases using Python's MySQLdb module.
-This task helps me understand how to fetch and display data from a database table.
-"""
+"""Python - Object Relational Mapping ft MySQLdb and sys"""
 import MySQLdb
 import sys
 
