@@ -9,3 +9,4 @@ This directory contains SQL scripts for more advanced MySQL queries and user man
 - **2-create_read_user.sql**: Creates the database `hbtn_0d_2` and the user `user_0d_2` with SELECT privilege on `hbtn_0d_2`.
 - **3-force_name.sql**: Creates the table `force_name` with an `id` and a non-nullable `name` column.
 - **4-never_empty.sql**: Creates the table `id_not_null` with an `id` column having a default value of 1, and a `name` column.
+- **5-unique_id.sql**: Creates the table `unique_id` with an `id` column that has a default value of 1 and must be unique, and a `name` column.
