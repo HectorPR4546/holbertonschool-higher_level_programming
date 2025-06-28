@@ -31,7 +31,8 @@ def list_states(username, password, db_name):
         rows = cursor.fetchall()
         for row in rows:
             # Explicitly format the output to match the example exactly: (id, 'name')
-            print(f"({int(row[0])}, '{row[1]}')")
+            # Strip any potential whitespace from the name string.
+            print(f"({int(row[0])}, '{row[1].strip()}')")
         cursor.close()
         db.close()
     except MySQLdb.Error as e:
