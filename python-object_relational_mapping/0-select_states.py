@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-Lists all states from the database hbtn_0e_0_usa.
+This script connects to a MySQL server and lists all states from a specified database.
+As a Holberton School intern, I am learning how to interact with databases using Python's MySQLdb module.
+This task helps me understand how to fetch and display data from a database table.
 """
 import MySQLdb
 import sys
@@ -8,12 +10,14 @@ import sys
 
 def list_states(username, password, db_name):
     """
-    Connects to a MySQL server and lists all states from the specified database.
+    Connects to the MySQL server running on localhost at port 3306
+    and retrieves all records from the 'states' table, sorted by their IDs.
+    Each record is then printed to the console.
 
     Args:
-        username (str): MySQL username.
-        password (str): MySQL password.
-        db_name (str): Name of the database.
+        username (str): The MySQL username to connect with.
+        password (str): The password for the MySQL user.
+        db_name (str): The name of the database to connect to.
     """
     try:
         db = MySQLdb.connect(host="localhost",
@@ -22,6 +26,7 @@ def list_states(username, password, db_name):
                              passwd=password,
                              db=db_name)
         cursor = db.cursor()
+        # As an intern, I'm learning to write SQL queries directly in Python.
         cursor.execute("SELECT * FROM states ORDER BY id ASC")
         rows = cursor.fetchall()
         for row in rows:
@@ -33,6 +38,8 @@ def list_states(username, password, db_name):
 
 
 if __name__ == "__main__":
+    # This part ensures the script only runs when executed directly,
+    # not when imported as a module.
     if len(sys.argv) == 4:
         mysql_username = sys.argv[1]
         mysql_password = sys.argv[2]
