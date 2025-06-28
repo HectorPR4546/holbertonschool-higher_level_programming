@@ -18,3 +18,4 @@ This directory contains SQL scripts for more advanced MySQL queries and user man
 - **11-genre_id_all_shows.sql**: Lists all shows from `hbtn_0d_tvshows`, displaying show title and genre ID (or NULL if no genre), sorted by title and genre ID.
 - **12-no_genre.sql**: Lists all shows from `hbtn_0d_tvshows` that do not have a genre linked, displaying show title and genre ID, sorted by title and genre ID.
 - **13-count_shows_by_genre.sql**: Lists all genres from `hbtn_0d_tvshows` and displays the number of shows linked to each, sorted by the number of shows (descending).
+- **14-my_genres.sql**: Lists all genres of the show 'Dexter' from the `hbtn_0d_tvshows` database, sorted by genre name.
