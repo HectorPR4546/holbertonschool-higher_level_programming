@@ -10,7 +10,10 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     c = db.cursor()
-    query = "SELECT cities.name FROM cities JOIN states ON cities.state_id = states.id WHERE states.name LIKE BINARY %s ORDER BY cities.id ASC"
+    query = "SELECT cities.name FROM cities\
+             JOIN states ON cities.state_id = states.id\
+             WHERE states.name LIKE BINARY %s\
+             ORDER BY cities.id ASC"
     c.execute(query, (argv[4],))
     cities = c.fetchall()
     city_names = [city[0] for city in cities]
