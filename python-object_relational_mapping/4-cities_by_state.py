@@ -12,7 +12,7 @@ if __name__ == "__main__":
     c = db.cursor()
     c.execute("SELECT cities.id, cities.name, states.name\
                FROM cities\
-               JOIN statesON cities.state_id = states.id\
+               JOIN states ON cities.state_id = states.id\
                ORDER BY cities.id ASC")
     for row in c.fetchall():
         print(row)
