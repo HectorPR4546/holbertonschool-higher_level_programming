@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-This is my first time connecting Python to a database! Wish me luck.
-This script will select all the states that start with an uppercase 'N'
-"""
+""" My first database script! """
 import MySQLdb
 from sys import argv
 
