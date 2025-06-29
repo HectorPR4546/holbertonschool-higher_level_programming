@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" My first database script! """
+""" Python x MySQL : Listing specific data from a database using args """
 import MySQLdb
 from sys import argv
 
