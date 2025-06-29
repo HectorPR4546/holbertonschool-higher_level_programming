@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Python x MySQL : Listing specific data from a database using args """
+"""
+This is my first time connecting Python to a database! Wish me luck.
+This script will select all the states that start with an uppercase 'N'
+"""
 import MySQLdb
 from sys import argv
 
