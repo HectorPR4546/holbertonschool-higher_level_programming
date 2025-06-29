@@ -1,1 +1,1 @@
-This directory contains Python scripts for interacting with MySQL databases, focusing on Object-Relational Mapping (ORM) concepts.
+Python Object Relational Mapping
