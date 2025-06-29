@@ -10,7 +10,8 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     c = db.cursor()
-    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id".format(argv[4])
+    query = "SELECT * FROM states WHERE name LIKE BINARY \
+            '{}' ORDER BY states.id".format(argv[4])
     c.execute(query)
     for state in c.fetchall():
         print(state)
