@@ -33,3 +33,4 @@ if __name__ == "__main__":
 
     #  Finally close "cursor"
     session.close()
+    
