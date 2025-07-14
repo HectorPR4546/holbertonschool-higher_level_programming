@@ -11,4 +11,3 @@ if (isNaN(x)) {
   }
   console.log(output.trimEnd());
 }
-
