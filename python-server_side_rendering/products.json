@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "category": "Electronics",
+        "price": 1200.00
+    },
+    {
+        "id": 2,
+        "name": "Mouse",
+        "category": "Electronics",
+        "price": 25.00
+    },
+    {
+        "id": 3,
+        "name": "Keyboard",
+        "category": "Electronics",
+        "price": 75.00
+    },
+    {
+        "id": 4,
+        "name": "Monitor",
+        "category": "Electronics",
+        "price": 300.00
+    },
+    {
+        "id": 5,
+        "name": "Desk Chair",
+        "category": "Furniture",
+        "price": 150.00
+    }
+]
